@@ -1,0 +1,33 @@
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="formContact">
+    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column['column']">
+      <th mat-header-cell *matHeaderCellDef> {{column['titre']}} </th>
+      <td mat-cell (click)="getLine(element)" *matCellDef="let element"> {{element[column['value']]}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="showColumn"></tr>
+    <tr mat-row *matRowDef="let row; columns: showColumn;"></tr>
+</table> -->
+
+<form [formGroup]="registerForm" class="formContact">
+        <!-- <mat-form-field appearance="fill">
+            <mat-label>Saisissez l'objet du mail</mat-label>
+            <input matInput formControlName="sujet" name="sujet">
+            <mat-error *ngIf="registerForm.hasError('required','sujet')">Ce champ est vide</mat-error>
+            <mat-error *ngIf="registerForm.hasError('minlength','sujet')">Veuillez mettre au moins 3 caractères</mat-error>
+        </mat-form-field> -->
+        <ng-container *ngFor="let FC of formContact">
+            <mat-form-field appearance="fill">
+                <mat-label>{{FC['label']}}</mat-label>
+                
+                    <input matInput formControlName="{{FC['name']}}" name="{{FC['name']}}"> 
+                <div *ngFor="let error of FC['MatError']">
+                    <mat-error *ngIf="registerForm.hasError(error)">qefkjglaefkj</mat-error>
+                </div>
+            </mat-form-field>
+            <br>
+        </ng-container>
+        
+        <section>
+            <button mat-flat-button color="primary" type="submit" class="buttonValide">Valider</button>
+        </section>
+</form>

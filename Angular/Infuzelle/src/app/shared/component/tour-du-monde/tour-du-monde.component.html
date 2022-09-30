@@ -1,0 +1,17 @@
+<p [innerHtml]="'Tour du monde' | coordonnee"></p>
+
+Concept :<br>
+Faire à apparaître un site différent tout les 5 secondes <br><br>
+
+Piste de réflexion :<br>
+- window.open<br>
+- setTimeout<br>
+<br>
+Résultat obtenu :<br>
+- un bouton qui change de page à change appui jusqu'à la fin du tableau<br>
+Cliquez dessus pour commencer et continuer :<br>
+<form [formGroup]="registerForm" (ngSubmit)="tourDuMonde()" >
+    <section>
+        <button mat-flat-button color="primary" type="submit" class="buttonValide">Commencer</button>
+    </section>
+</form>

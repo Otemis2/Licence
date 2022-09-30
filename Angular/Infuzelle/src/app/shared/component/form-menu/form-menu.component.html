@@ -1,0 +1,33 @@
+<form [formGroup]="registerForm" (ngSubmit)="generer()">
+
+    <div class="formContact">
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Nom du menu</mat-label>
+            <input matInput formControlName="nMenu" name="nMenu">
+            <mat-error *ngIf="registerForm.hasError('required','nMenu')">Ce champ est vide</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Entrée</mat-label>
+            <textarea matInput formControlName="entree" name="entree"></textarea>
+            <mat-error *ngIf="registerForm.hasError('required','entree')">Ce champ est vide</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Plat</mat-label>
+            <textarea matInput formControlName="Plat" name="Plat"></textarea>
+            <mat-error *ngIf="registerForm.hasError('required','Plat')">Ce champ est vide</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Dessert</mat-label>
+            <textarea matInput formControlName="desserts" name="desserts"></textarea>
+            <mat-error *ngIf="registerForm.hasError('required','desserts')">Ce champ est vide</mat-error>
+        </mat-form-field>
+        <br>
+        <section>
+            <button mat-flat-button color="primary" type="submit" class="buttonValide">Valider</button>
+        </section>
+    </div>
+</form>
