@@ -1,0 +1,46 @@
+<form [formGroup]="registerForm" (ngSubmit)="submit()">
+<p>create-contact works!</p>
+<mat-form-field appearance="fill">
+    <mat-label>Nom</mat-label>
+    <input matInput formControlName="nom">
+  </mat-form-field>
+  <br>
+<!-- 
+  <p>Select</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Toppings</mat-label>
+    <mat-select multiple>
+      <mat-option>Clear</mat-option>
+      <mat-option value="valid">Valid option</mat-option>
+      <mat-option value="invalid">Invalid option</mat-option>
+    </mat-select>
+  </mat-form-field>
+-->  
+<br>
+  <mat-form-field appearance="fill">
+    <mat-label>Adresse</mat-label>
+    <input matInput formControlName="adresse">
+  </mat-form-field>
+  <mat-error></mat-error>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Numero</mat-label>
+    <input matInput formControlName="tel">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Prenom</mat-label>
+    <input matInput formControlName="prenom">
+  </mat-form-field>
+  <br>
+  <section>
+    <button mat-button type="submit">Valider</button>
+  </section>
+</form>
+
+<app-table></app-table>
